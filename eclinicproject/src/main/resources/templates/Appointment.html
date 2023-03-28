@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="Appointment/Appointment.css">
+</head>
+<body>
+<div id="login-box">
+  <div class="left">
+  <form action="/Patient" method="post">
+    
+    your first name<input type="text" name="fname" placeholder="firstname" />
+    your last name<input type="text" name="lname" placeholder="lastname"/>
+   Date of birth <input type="date" name="DOB" placeholder="date of birth"/>
+   Gender <input type="radio" name="gender" value="male" > Male
+	      <input type="radio" name="gender" value="female" > FeMale
+    email<input type="text" name="email" placeholder="E-mail" />
+    anything else<input type="text" name="query" placeholder="remarks"/>
+    
+    
+    <input type="submit" value="Sign me up" />
+    </form>
+  </div>
+  
+  
+  <div class="right">
+   
+  </div>
+  <div class="or">OR</div>
+</div>
+</body>
+</html>

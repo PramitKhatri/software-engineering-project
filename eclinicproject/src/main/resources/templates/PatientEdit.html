@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Patient</title>
+<link rel="stylesheet" href="Appointment/Appointment.css">
+</head>
+<body>
+<div id="login-box">
+  <div class="left">
+  <form action="/Update" method="post" th:object="${Pmodel}">
+    
+    your first name<input type="text" th:field="*{fname}" placeholder="firstname" />
+    your last name<input type="text"th:field="*{lname}" placeholder="lastname"/>
+   Date of birth <input type="date" th:field="*{DOB}" placeholder="date of birth"/>
+   Gender <input type="radio" th:field="*{gender}" value="male" > Male
+	      <input type="radio" th:field="*{gender}" value="female" > FeMale
+    email<input type="text" th:field="*{email}" placeholder="E-mail" />
+    anything else<input type="text" name="*{query}" placeholder="remarks"/>
+    
+    
+    <input type="submit" value="update" />
+    </form>
+  </div>
+  
+  
+  <div class="right">
+   
+  </div>
+  <div class="or">OR</div>
+</div>
+</body>
+</html>

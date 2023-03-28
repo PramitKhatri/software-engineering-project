@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Patient list</title>
+</head>
+<body>
+	<table id="table_id">
+<thead>
+<tr>
+		<td>fname</td>
+		<td>lname</td>
+		<td>DOB</td>
+		<td>Gender</td>
+		<td>E-mail</td>
+		<td>Remarks</td>
+
+</tr>
+</thead>
+<tbody>
+		<tr th:each="emp:${elist}">
+		<td>[[${PatientQ.fname}+' '+${emp.lname}]]</td>
+		<td>[[${PatientQ.lname}]]</td>
+		<td>[[${PatientQ.DOB}]]</td>
+		<td>[[${PatientQ.gender}]]</td>
+		<td>[[${PatientQ.query}]]</td>
+		<td>
+			<a th:href="@{/edit(id=${PatientQ.id})}"><input class="btn btn-success" type="submit"value="Edit"></a>
+			<a th:href="@{/delete(id=${PatientQ.id})}"> <input class="btn btn-danger" type="submit"value="Delete"> </a>
+			
+		</td>
+		
+		</tr>
+</tbody>
+
+</table>
+
+<script type="text/javascript">
+
+
+	$(document).ready( function () {
+	    $('#table_id').DataTable();
+	} );
+
+</script>
+
+</body>
+</html>
